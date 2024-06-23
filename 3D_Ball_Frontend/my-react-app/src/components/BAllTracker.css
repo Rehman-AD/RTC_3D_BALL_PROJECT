@@ -1,0 +1,73 @@
+.container {
+    text-align: center;
+    background: #F1F1F1;
+    padding: 20px;
+    padding-bottom: 10px;
+    /* max-width: 90%; Ensure the container doesn't exceed the viewport width */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-field {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    transition: border-color 0.8s;
+    width: 80%; /* Responsive width */
+  }
+  
+  .input-field:focus {
+    border-color: #1b899f;
+  }
+  
+  .update-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #1b899f;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Add some spacing on top */
+  }
+  
+  .update-button:hover {
+    background-color: #0C1844;
+    transition: 1000ms;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .threejs-container {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #f0f0f0); /* Set background color here */
+  }
+  
+  .ball {
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  }
+  
+  /* Media queries for responsiveness */
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .input-field {
+      width: 200px; /* Set a fixed width for larger screens */
+    }
+  }
+  
