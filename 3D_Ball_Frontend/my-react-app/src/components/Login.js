@@ -15,10 +15,10 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', { username, password });
-      if (response.data.token) { // Check if token is received
+      if (response.data.token) { 
         localStorage.setItem('token', response.data.token);
         setIsAuthenticated(true);
-        navigate('/ball-tracker'); // Navigate to BallTracker page on successful login
+        navigate('/ball-tracker'); 
         setError(null);
       } else {
         throw new Error('Login failed');

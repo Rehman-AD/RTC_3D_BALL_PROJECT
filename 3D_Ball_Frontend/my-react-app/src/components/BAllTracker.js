@@ -12,12 +12,12 @@ const BallTracker = () => {
   const [error, setError] = useState(null);
   const mountRef = useRef(null);
   const ballRef = useRef(null);
-  const socketRef = useRef(null); // Use useRef to store the socket instance
+  const socketRef = useRef(null); 
 
   useEffect(() => {
-    // Establish a persistent socket connection
+   
     const socket = io('http://localhost:5000');
-    socketRef.current = socket; // Store the socket instance
+    socketRef.current = socket; 
 
     socket.on('position', (position) => {
       setPositions((prevPositions) => [...prevPositions, position]);
@@ -55,7 +55,6 @@ const BallTracker = () => {
 
     fetchData();
 
-    // Cleanup socket connection on component unmount
     return () => socket.disconnect();
   }, []);
 
@@ -94,7 +93,6 @@ const BallTracker = () => {
   const handleUpdatePosition = async () => {
     try {
       await savePosition(x, y, z);
-      // Emit new position to the server using the existing socket connection
       if (socketRef.current) {
         socketRef.current.emit('newPosition', { x, y, z });
       }
