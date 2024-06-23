@@ -29,7 +29,7 @@ const Home = () => {
         }}
       >
         <Typography component="h1" variant="h5" sx={{ mb: 2 }}>
-          Welcome
+          Welcome To Home Project From RTC League
         </Typography>
         <Button
           variant="contained"
